@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Romain Planquette</title>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lien vers votre fichier de styles CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="main-body">
+
+    <!-- Header / Navigation Bar -->
+    <header class="main-header">
+        <div class="header-content">
+            <h1 class="site-title">Romain Planquette</h1>
+            <nav>
+                <ul class="main-nav-list">
+                    <li><a href="#hero-section" class="nav-link">Accueil</a></li>
+                    <li><a href="#about-section" class="nav-link">À Propos</a></li>
+                    <li><a href="#projects-summary-section" class="nav-link">Projets</a></li>
+                    <li><a href="#contact-section" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+
+        <!-- Hero Section - First Impression with Parallax -->
+         <section id="hero-section">
+            <!-- Nouveau conteneur pour les particules CSS -->
+            <div class="particles-container"></div>
+            <div class="hero-content">
+                <h2 class="hero-title hero-text-animation animation-delay-0-4s">Romain Planquette</h2>
+                <p class="hero-subtitle hero-text-animation animation-delay-0-6s">
+                    <span class="typewriter-text">Étudiant en BUT informatique</span><span class="typewriter-cursor">|</span>
+                </p>
+                <a href="#about-section" class="hero-button hero-text-animation animation-delay-0-8s scroll-button">
+                    Découvrir mon portfolio
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section - Présentation synthétique détaillée -->
+        <section id="about-section" class="content-section">
+            <h2 class="section-title">À Propos de Moi</h2>
+            <div class="section-text-block">
+                <p class="paragraph-mb-4">
+                    Bonjour ! Je suis <strong class="highlight-text-blue">Romain Planquette</strong>, étudiant en <strong class="highlight-text-blue">BUT Informatique</strong> à l'IUT de Grenoble. Passionné par l'informatique et les nouvelles technologies, je me destine au métier de la <strong class="highlight-text-blue">cybersécurité</strong>.
+                </p>
+                <p class="paragraph-mb-4">
+                    Au cours de mon parcours, j'ai acquis des compétences solides en programmation (Java, Python), en gestion de bases de données (SQL) et en développement web (HTML, CSS).
+                </p>
+                <div class="mt-6">
+                    <h3 class="subsection-title">Mon parcours :</h3>
+                    <ul class="list-style-disc">
+                        <li><span class="list-item-highlight">2023 - Présent :</span> BUT Informatique, IUT de Grenoble</li>
+                        <li><span class="list-item-highlight">2021 - 2024 :</span> Baccalauréat Général, Lycée La Pleiade</li>
+                    </ul>
+                </div>
+                <div class="mt-6">
+                    <h3 class="subsection-title">Mes Compétences :</h3>
+                    <div class="skill-tags-container">
+                        <span class="skill-tag skill-tag-java">Java</span>
+                        <span class="skill-tag skill-tag-python">Python</span>
+                        <span class="skill-tag skill-tag-html-css">HTML & CSS</span>
+                        <span class="skill-tag skill-tag-sql">SQL</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Summary Section -->
+        <section id="projects-summary-section" class="content-section">
+            <h2 class="section-title">Mes Projets</h2>
+            <div id="projects-list" class="projects-grid">
+                <!-- Project cards will be dynamically inserted here by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact-section" class="content-section">
+            <h2 class="section-title">Me Contacter</h2>
+            <div class="contact-content-wrapper">
+                <div class="contact-column">
+                    <h3 class="subsection-title">Mes Réseaux Professionnels :</h3>
+                    <ul class="contact-links-list">
+                        <li>
+                            <a href="https://www.linkedin.com/in/romain-planquette-a6a53336a/" target="_blank" class="contact-link contact-link-linkedin">
+                                <svg class="contact-icon" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                </svg>
+                                LinkedIn
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:prenom.nom@etu.univ-grenoble-alpes.fr" class="contact-link contact-link-email">
+                                <svg class="contact-icon" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                </svg>
+                                prenom.nom@etu.univ-grenoble-alpes.fr
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contact-column">
+                    <h3 class="subsection-title">Formulaire de Contact :</h3>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Nom :</label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="Votre Nom" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email :</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="votre.email@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message :</label>
+                            <textarea id="message" name="message" rows="6" class="form-input" placeholder="Votre message..." required></textarea>
+                        </div>
+                        <button type="submit" class="form-submit-button">
+                            Envoyer le message
+                        </button>
+                    </form>
+                    <div id="form-message" class="form-message hidden">
+                        <!-- Message for form submission -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Project Detail Section - Hidden by default, now a fixed overlay -->
+    <section id="project-detail-section">
+        <div class="detail-content-wrapper">
+            <button id="back-to-projects" class="back-button">
+                &larr; Retour aux projets
+            </button>
+            <h2 id="project-detail-title" class="project-detail-title"></h2>
+            <div class="project-detail-prose">
+                <img id="project-detail-image" src="" alt="" class="project-detail-image">
+                <h3 class="project-detail-subtitle">Description :</h3>
+                <p id="project-detail-description" class="project-detail-text"></p>
+
+                <h3 class="project-detail-subtitle">Compétences :</h3>
+                <ul id="project-detail-competences" class="project-detail-list"></ul>
+
+                <h3 class="project-detail-subtitle">Objectifs :</h3>
+                <p id="project-detail-objectifs" class="project-detail-text"></p>
+
+                <h3 class="project-detail-subtitle">Travail en groupe :</h3>
+                <p id="project-detail-group-work" class="project-detail-text"></p>
+
+                <h3 class="project-detail-subtitle">Travail individuel dans le groupe :</h3>
+                <p id="project-detail-individual-work" class="project-detail-text"></p>
+
+                <h3 class="project-detail-subtitle">Techniques et savoir-faire acquis :</h3>
+                <ul id="project-detail-techniques" class="project-detail-list"></ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Romain Planquette - Étudiant en BUT informatique</p>
+        </div>
+    </footer>
+
+    <!-- Lien vers votre fichier de script JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
