@@ -198,8 +198,8 @@ body {
     width: 0;              /* Commence avec une largeur de 0 */
     opacity: 0; /* Commence caché */
     /* Combinaison des animations de "typing" et "fadeInText" */
-    animation: typing 4s steps(56, end) forwards, fadeInText 0.1s ease-in-out forwards;
-    animation-delay: 1.8s, 1.8s; /* Démarre après l'animation initiale du parent */
+    animation: typing 2s steps(30, end) forwards, fadeInText 0.1s ease-in-out forwards;
+    animation-delay: 1s, 1s; /* Démarre après l'animation initiale du parent */
 }
 
 /* Styles pour le curseur clignotant */
