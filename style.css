@@ -675,6 +675,7 @@ body {
     line-height: 1.5;
     outline: none;
     transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    box-sizing: border-box;
 }
 
 .form-input:hover {
@@ -690,7 +691,7 @@ body {
 
 .form-submit-button {
     width: 100%;
-    padding: 0.75rem 1.5rem;
+    padding: 0.75rem 1rem;
     background-color: #2563eb;
     color: white;
     font-weight: 700;
@@ -701,6 +702,8 @@ body {
     transition-timing-function: ease-in-out;
     border: none;
     cursor: pointer;
+    text-align: center;
+    box-sizing: border-box;
 }
 
 .form-submit-button:hover {
