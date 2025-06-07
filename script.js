@@ -212,21 +212,52 @@ backToProjectsButton.addEventListener('click', function() {
 });
 
 // Handle contact form submission
-contactForm.addEventListener('submit', function(e) {
+contactForm.addEventListener('submit', async function(e) { // Added 'async' keyword
     e.preventDefault(); // Prevent actual form submission
 
-    // In a real application, you would send this data to a server.
-    // For this portfolio, we'll just show a success message.
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const message = document.getElementById('message').value;
 
-    console.log('Formulaire soumis :', { name, email, message });
-
-    formMessage.textContent = 'Merci pour votre message, ' + name + '! Je vous recontacterai bientôt.';
+    formMessage.classList.remove('text-green-600', 'text-red-600');
+    formMessage.textContent = 'Envoi en cours...';
     formMessage.classList.remove('hidden');
-    formMessage.classList.add('text-green-600'); // Ensure success color
-    contactForm.reset(); // Clear the form
+
+    try {
+        const response = await fetch('https://formspree.io/f/xqabegbq', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json' // Important for Formspree to return JSON response
+            },
+            body: JSON.stringify({
+                name: name,
+                email: email,
+                message: message
+            })
+        });
+
+        if (response.ok) {
+            formMessage.textContent = 'Merci pour votre message, ' + name + '! Je vous recontacterai bientôt.';
+            formMessage.classList.add('text-green-600');
+            contactForm.reset(); // Clear the form
+        } else {
+            // Handle HTTP errors or Formspree specific errors
+            let errorData;
+            try {
+                errorData = await response.json(); // Try to parse JSON error
+            } catch (jsonError) {
+                errorData = { message: 'Une erreur inattendue est survenue lors de la soumission.' };
+            }
+            console.error('Erreur Formspree:', errorData);
+            formMessage.textContent = 'Échec de l\'envoi du message. Veuillez réessayer. Erreur: ' + (errorData.errors ? errorData.errors.map(err => err.message).join(', ') : errorData.message);
+            formMessage.classList.add('text-red-600');
+        }
+    } catch (error) {
+        console.error('Erreur réseau ou soumission:', error);
+        formMessage.textContent = 'Échec de l\'envoi du message en raison d\'une erreur réseau.';
+        formMessage.classList.add('text-red-600');
+    }
 
     setTimeout(() => {
         formMessage.classList.add('hidden');
