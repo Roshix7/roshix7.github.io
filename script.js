@@ -238,7 +238,7 @@ contactForm.addEventListener('submit', async function(e) { // Added 'async' keyw
         });
 
         if (response.ok) {
-            formMessage.textContent = 'Merci pour votre message, ' + name + '! Je vous recontacterai bientôt.';
+            formMessage.textContent = 'Votre message a bien été envoyé';
             formMessage.classList.add('text-green-600');
             contactForm.reset(); // Clear the form
         } else {
